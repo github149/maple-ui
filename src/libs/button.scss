@@ -1,0 +1,68 @@
+$primary-btn-color: #1890ff;
+$primary-btn-hover: #40a9ff;
+//初始样式
+.maple-btn {
+    
+    border: none;
+    outline: none;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-align: center;
+    padding: 4px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 4px;
+    background: #fff;
+  }
+  .maple-btn:active {
+    color: #fff;
+    border-color: $primary-btn-color;
+  }
+  .maple-btn:hover {
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px #0000000b;
+    color: $primary-btn-color;
+    background-color: #fff;
+  }
+  //primary-button的样式
+  .maple-btn-primary {
+    color: #fff;
+    background: $primary-btn-color;
+  }
+  
+  .maple-btn-primary:hover {
+    background: $primary-btn-hover;
+    color: #fff;
+  }
+  
+  //默认button样式
+  .maple-btn-default {
+    border: 1px solid #d9d9d9;
+  }
+  .maple-btn-default:hover {
+    border: 1px solid $primary-btn-color;
+    color: $primary-btn-color;
+  }
+  
+  //虚线按钮样式
+  .maple-btn-dashed {
+    border: 1px dashed #d9d9d9;
+  }
+  
+  //文本按钮
+  .maple-btn-text {
+    border-color: transparent;
+  }
+  .maple-btn-text:hover {
+    color: #000;
+    background-color: #fff;
+    background: rgba(0, 0, 0, 0.028);
+  }
+  //链接按钮
+  .maple-btn-link {
+    color: $primary-btn-color;
+  }
+  .maple-btn-link:hover {
+    text-shadow: none;
+    box-shadow: none;
+  }
