@@ -5,7 +5,7 @@
         <div class="maple-dialog-header">
           {{ title }} <span @click="cancel">x</span>
         </div>
-        <div class="maple-dialog-body"><slot /></div>
+        <div class="maple-dialog-body"><slot name="content"/></div>
         <div class="maple-dialog-footer">
           <Button @click="cancel">取消</Button
           ><Button type="primary" @click="confirm">确认</Button>
