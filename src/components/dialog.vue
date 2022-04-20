@@ -1,7 +1,7 @@
 <template>
   <div>
     <Button type="primary" @click="close">显示dialog</Button>  
-    <Dialog v-model:visible="visible"  title="dialog标题" :confirm="f1" :cancel="f2" >
+    <Dialog v-model:visible="visible"  title="提示" :confirm="f1" :cancel="f2" >
       <p>这是一段文字</p>
       <p>这是一段文字</p>
       <p>这是一段文字</p>

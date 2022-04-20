@@ -1,15 +1,18 @@
 <template>
-  <div class="maple-dialog-wraper" v-if="props.visible" @click.self="close">
-    <div class="maple-dialog">
-      <div class="maple-dialog-header">
-        {{ props.title }} <span @click="cancel">x</span>
-      </div>
-      <div class="maple-dialog-body"><slot /></div>
-      <div class="maple-dialog-footer">
-        <Button @click="cancel">取消</Button><Button type="primary" @click="confirm">确认</Button>
+  <teleport to="#app">
+    <div class="maple-dialog-wraper" v-if="visible" @click.self="close">
+      <div class="maple-dialog">
+        <div class="maple-dialog-header">
+          {{ title }} <span @click="cancel">x</span>
+        </div>
+        <div class="maple-dialog-body"><slot /></div>
+        <div class="maple-dialog-footer">
+          <Button @click="cancel">取消</Button
+          ><Button type="primary" @click="confirm">确认</Button>
+        </div>
       </div>
     </div>
-  </div>
+  </teleport>
 </template>
 <script>
 import Button from "../libs/Button.vue";
@@ -26,37 +29,35 @@ export default {
       type: String,
       default: "这是一个title",
     },
-    confirm:{
-        type:Function,
-        default:()=>true
+    confirm: {
+      type: Function,
+      default: () => true,
     },
-    cancel:{
-        type:Function,
-        default:()=>true
-    }
+    cancel: {
+      type: Function,
+      default: () => true,
+    },
   },
-  setup(props,context) {
+  setup(props, context) {
     let close = () => {
-        context.emit('update:visible',!props.visible)
-    }
-    let cancel = ()=>{
-        console.log(props.cancel())
-        if(props.cancel?.() === true){
-            close()
-        }
-    }
-    let confirm = ()=>{
-        if(props.confirm?.() === true){
-            close()
-        }
-    }
-    
+      context.emit("update:visible", !props.visible);
+    };
+    let cancel = () => {
+      console.log(props.cancel());
+      if (props.cancel?.() === true) {
+        close();
+      }
+    };
+    let confirm = () => {
+      if (props.confirm?.() === true) {
+        close();
+      }
+    };
 
     return {
-      props,
       close,
       cancel,
-      confirm
+      confirm,
     };
   },
 };
@@ -96,8 +97,8 @@ export default {
     cursor: pointer;
     width: 20px;
     height: 20px;
-    text-align:center;
-    line-height:20px;
+    text-align: center;
+    line-height: 20px;
   }
 }
 .maple-dialog-body {
