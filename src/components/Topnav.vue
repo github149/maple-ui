@@ -1,18 +1,36 @@
 <template>
-  <div class="topnav">
-    <div class="logo">LOGO</div>
+  <div class="topnav" >
+    <router-link to="/" class="logo">
+      <svg class="icon">
+        <use xlink:href="#icon-mapleleaf"></use>
+      </svg>
+    </router-link>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li><router-link class="bg_color" to="/doc/introduce">文档页</router-link></li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu">1111</span>
+    <div class="toggleAside" @click="toggleMenu" v-if="visible">
+      <div class="close">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
-import { inject, Ref } from "vue";
+import { inject, Ref, onMounted } from "vue";
 export default {
-  setup() {
+  props: {
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  setup(props) {
+    console.log(props.visible);
     const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
+
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
     };
@@ -21,20 +39,27 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.bg_color {
+  color: #add8e6;
+}
 .topnav {
-  background: pink;
+  color: #faf4f6;
   display: flex;
   padding: 16px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 300;
   justify-content: center;
   align-items: center;
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    > .icon {
+      width: 34px;
+      height: 34px;
+    }
   }
   > .menu {
     display: flex;
@@ -45,14 +70,26 @@ export default {
     }
   }
   > .toggleAside {
-    width: 24px;
+    width: 30px;
     height: 24px;
-    background: red;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    > .close {
+      height:100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > span {
+        border-radius:5px;
+        width: 100%;
+        display: block;
+        background: #fff;
+        height: 5px;
+      }
+    }
   }
   @media (max-width: 500px) {
     > .menu {

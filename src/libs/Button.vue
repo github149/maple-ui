@@ -109,22 +109,25 @@ $primary-btn-hover: #40a9ff;
 }
 [disabled].maple-btn-text,
 [disabled].maple-btn-link {
-  pointer-events: none;
+  
   color: #c0c4cc;
   cursor: not-allowed;
   background-image: none;
   background-color: #fff;
   border-color: #ebeef5;
+  
 }
 
 [disabled].maple-btn-primary,
 [disabled].maple-btn-default,
 [disabled].maple-btn-dashed {
-    pointer-events: none;
+    
+    
     color: #00000040;
     border-color: #d9d9d9;
     background: #f5f5f5;
     text-shadow: none;
     box-shadow: none; 
+    cursor: not-allowed;
 }
 </style>

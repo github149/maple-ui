@@ -69,7 +69,7 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: 400;
   background: rgba(0, 0, 0, 0.45);
 }
 .maple-dialog {
