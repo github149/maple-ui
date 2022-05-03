@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ checked: value }" props.disabled><span @click="toggle"></span></button>
+  <button :class="{ checked: value }" ><span @click="toggle"></span></button>
 </template>
 <script lang="ts">
 export default {

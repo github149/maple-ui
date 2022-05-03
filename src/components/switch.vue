@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Switch 组件示例</h1>
+    <h2>Switch 组件示例</h2>
     <div class="demo">
-      <h2>常规用法</h2>
+      <h3>常规用法</h3>
       <div class="demo-component">
         <Switch1Demo />
       </div>
@@ -59,8 +59,8 @@ $border-color: #d9d9d9;
   max-width: 600px;
   border: 1px solid $border-color;
   margin: 16px 0 32px;
-  > h2 {
-    font-size: 20px;
+  > h3 {
+    font-size: 16px;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }

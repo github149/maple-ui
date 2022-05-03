@@ -1,7 +1,7 @@
 <template>
   <div class="button">
     <div class="">
-      <h2>示例一：普通版打开dialog</h2>
+      <h3>示例一：普通版打开dialog</h3>
       <div class="demo">
         <h2>常规用法</h2>
         <div class="demo-component">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="mt-8">
-      <h2>示例二:更优雅的创建dialog</h2>
+      <h3>示例二:更优雅的创建dialog</h3>
       <div class="demo">
         <h2>常规用法</h2>
         <div class="demo-component">

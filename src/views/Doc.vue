@@ -60,11 +60,10 @@ export default {
   > .nav {
     flex-shrink: 0;
   }
-  > .content {
-     
+  > .content { 
     flex-grow: 1;
     padding-top: 60px;
-    padding-left: 156px;
+    padding-left: 150px;
     @media (max-width: 500px) {
       padding-left: 0; 
     }
@@ -83,7 +82,7 @@ export default {
 }
 aside {
   z-index:200;
-  background: lightblue;
+  background: #5caecd;
   width: 150px;
   
   position: fixed;

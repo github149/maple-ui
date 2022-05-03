@@ -30,7 +30,6 @@ export default {
   setup(props) {
     console.log(props.visible);
     const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
-
     const toggleMenu = () => {
       menuVisible.value = !menuVisible.value;
     };
@@ -40,10 +39,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .bg_color {
-  color: #add8e6;
+  color: white;
 }
 .topnav {
-  color: #faf4f6;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -70,6 +68,7 @@ export default {
     }
   }
   > .toggleAside {
+    
     width: 30px;
     height: 24px;
     position: absolute;
@@ -86,8 +85,8 @@ export default {
         border-radius:5px;
         width: 100%;
         display: block;
-        background: #fff;
-        height: 5px;
+        background: #cd7b5c;
+        height: 5px;   
       }
     }
   }

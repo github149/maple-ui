@@ -5,7 +5,7 @@
       <h1>Maple UI</h1>
       <h3>一个厉害的 UI 框架</h3>
       <p class="btn">
-        <a href="https://github.com">GitHub</a>
+        <a href="https://github.com/github149/Maple-UI/tree/main">GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>

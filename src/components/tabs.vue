@@ -1,6 +1,6 @@
 <template>
     <div class="tabs">
-      <h1>Switch 组件示例</h1>
+      <h3>tabs组件</h3>
       <div class="demo">
         <h2>常规用法</h2>
         <div class="demo-component">
